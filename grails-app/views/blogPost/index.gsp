@@ -5,6 +5,7 @@
         <g:set var="entityName" value="${message(code: 'blogPost.label', default: 'BlogPost')}" />
         <title><g:message code="default.list.label" args="[entityName]" /></title>
     </head>
+
     <body>
         <a href="#list-blogPost" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
         <div class="nav" role="navigation">
@@ -18,7 +19,19 @@
             <g:if test="${flash.message}">
                 <div class="message" role="status">${flash.message}</div>
             </g:if>
-            <f:table collection="${blogPostList}" />
+            <ol>
+                <g:each var="blogPost" in= "${blogPostList}" >
+                    <div>
+                        <div>
+                            ${blogPost.title}
+                        </div>
+                        <div>
+                            ${blogPost.body}
+                        </div>
+                    </div>
+                </g:each>
+
+            </ol>
 
             <div class="pagination">
                 <g:paginate total="${blogPostCount ?: 0}" />
