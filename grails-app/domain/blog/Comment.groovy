@@ -1,11 +1,12 @@
 package blog
 
 class Comment {
-    String body
     String name
+    String body
     static mapping = {
         table 'Comments'
         id column: 'comment_id'
+        version: false
 
     }
     static belongsTo = [blogPost : BlogPost]

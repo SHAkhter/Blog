@@ -9,9 +9,8 @@ class CommentControllerSpec extends Specification implements ControllerUnitTest<
 
     def populateValidParams(params) {
         assert params != null
-
-        // TODO: Populate valid properties like...
-        //params["name"] = 'someValidName'
+        params.name = 'Bob Randall'
+        params.body = "Hi Jack my name is "
         assert false, "TODO: Provide a populateValidParams() implementation for this generated test suite"
     }
 

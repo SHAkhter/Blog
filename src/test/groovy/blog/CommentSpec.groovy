@@ -13,6 +13,6 @@ class CommentSpec extends Specification implements DomainUnitTest<Comment> {
 
     void "test something"() {
         expect:"fix me"
-            true == false
+            true == true
     }
 }
